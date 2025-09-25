@@ -17,8 +17,18 @@ let groceryList = ["Milk", "Oreos"];
 
 // Code to modularize:
 let item = "Animal Crackers";
+
 groceryList.push(item);
-console.log("Item added: " + item);
+console.log(iTem + item);
+
+iTem = "soda"
+
+groceryList.unshift(iTem);
+
+
+function iTem(item,iTem){
+  return iTem + item
+}
 
 //////////////////////////////////////////////////////////////////////
 // 2. Create a function that removes the last item from the list.
@@ -28,6 +38,9 @@ console.log("Item added: " + item);
 let itemToRemove = groceryList[groceryList.length - 1];
 groceryList.pop();
 console.log("Item removed: " + itemToRemove);
+
+
+
 
 //////////////////////////////////////////////////////////////////////
 // 3. Create a function that updates a specific item in the list.
