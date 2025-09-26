@@ -1,8 +1,8 @@
 // Follow the instructions for each section below.
 
-// The functions you will be writing will all be modifying the array groceryList below.
+// The functions you will be writing will all be modifying the array targetList below.
 // Leave it alone.
-let groceryList = ["Milk", "Oreos"];
+let targetList = ["Milk", "Oreos"];
 
 // Part 1 - Modularizing
 // In this section, you will use the existing code and turn them into functions.
@@ -18,16 +18,10 @@ let groceryList = ["Milk", "Oreos"];
 // Code to modularize:
 let item = "Animal Crackers";
 
-groceryList.push(item);
-console.log(iTem + item);
 
-iTem = "soda"
-
-groceryList.unshift(iTem);
-
-
-function iTem(item,iTem){
-  return iTem + item
+function addItem(targetList,item){
+  targetList.push(item)
+  return item
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -35,8 +29,8 @@ function iTem(item,iTem){
 // Return the removed item.
 
 // Code to modularize:
-let itemToRemove = groceryList[groceryList.length - 1];
-groceryList.pop();
+let itemToRemove = targetList[targetList.length - 1];
+targetList.pop();
 console.log("Item removed: " + itemToRemove);
 
 
@@ -49,19 +43,19 @@ console.log("Item removed: " + itemToRemove);
 // Code to modularize:
 let indexToUpdate = 0;
 let newItem = "Bananas";
-let oldItem = groceryList[indexToUpdate];
-groceryList[indexToUpdate] = newItem;
+let oldItem = targetList[indexToUpdate];
+targetList[indexToUpdate] = newItem;
 console.log("Item updated from " + oldItem + " to " + newItem);
 
 //////////////////////////////////////////////////////////////////////
-// 4. Create a function that shows the current grocery list.
-// Returns the grocery list array.
+// 4. Create a function that shows the current target list.
+// Returns the target list array.
 
 // Code to modularize:
-if (groceryList.length === 0) {
-  console.log("The grocery list is empty.");
+if (targetList.length === 0) {
+  console.log("The target list is empty.");
 } else {
-  console.log("Grocery List: " + groceryList);
+  console.log("target List: " + targetList);
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -71,13 +65,25 @@ if (groceryList.length === 0) {
 
 //////////////////////////////////////////////////////////////////////
 // 1. Write a function that logs how many items you have left in the list.
-// It should log the following "The grocery list has x item(s).", with x being how many items are left.
-// Returns the grocery list length.
+// It should log the following "The target list has x item(s).", with x being how many items are left.
+// Returns the target list length.\
+
+function countList(targetList){
+  console.log("The target list has " + targetList.length + " items")
+  return targetList.length
+
+}
+
 
 //////////////////////////////////////////////////////////////////////
-// 2. Write a function that clears the whole grocery list.
-// It should log the following "The grocery list is now empty."
-// Returns the empty grocery list.
+// 2. Write a function that clears the whole target list.
+// It should log the following "The target list is now empty."
+// Returns the empty target list.
+
+function clearList(targetList){
+delete targetList[0]
+console.log("The target list is now empty")
+}
 
 //////////////////////////////////////////////////////////////////////
 // Part 3 - Calling Functions
@@ -86,23 +92,23 @@ if (groceryList.length === 0) {
 // Remember that your functions should've already included console logs, therefore you are only calling your functions NOT logging them below.
 
 /*
-// The grocery list is cleared
+// The target list is cleared
 // Item added: Gouda Cheese
 // Item added: Brie Cheese
 // Item added: Swiss Cheese
 // Item removed: Swiss Cheese
 // Item added: Green Grapes
-// Grocery List: Gouda Cheese, Brie Cheese, Green Grapes
+// target List: Gouda Cheese, Brie Cheese, Green Grapes
 // Item added: Prosciutto
 // Item added: Chorizo
 // Item added: Multigrain Crackers
 // Item updated from Chorizo to Jamon
-// The grocery list has 6 item(s)
+// The target list has 6 item(s)
 // Item added: Pita Chips
-// Grocery List: Gouda Cheese, Brie Cheese, Green Grapes, Prosciutto, Jamon, Multigrain Crackers, Pita Chips
+// target List: Gouda Cheese, Brie Cheese, Green Grapes, Prosciutto, Jamon, Multigrain Crackers, Pita Chips
 */
 
-// Call 1: Clear the grocery list
+// Call 1: Clear the target list
 
 // Call 2: Add Gouda Cheese
 
